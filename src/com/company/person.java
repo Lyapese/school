@@ -2,9 +2,9 @@ package com.company;
 
 public class person {
     public String FullName;
-    public int Phone;
+    public long Phone;
 
-    public person(String F, int Ph) {
+    public person(String F, long Ph) {
         FullName = F;
         Phone = Ph;
     }
