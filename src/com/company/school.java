@@ -1,7 +1,7 @@
 package com.company;
 
 public class school {
-    public Employee[] Employes;
+    public Employee[] Employees;
     public Teacher[] Teachers;
     public Learner[] Learners;
     public String Adress;
@@ -11,7 +11,7 @@ public class school {
     public section[] Sections;
 
     public school(Employee[] E, Teacher[] T, Learner[] L, String A, String Na, Class[] C, elective[] El, section[] Se) {
-        Employes = E;
+        Employees = E;
         Teachers = T;
         Learners = L;
         Adress = A;
