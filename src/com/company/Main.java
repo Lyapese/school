@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Properties;
+
 public class Main {
     public static void main(String[]args){
         Employee E1 = new Employee("Директор", 89000000000L, 1, "Дмитрий Яковлевич");
@@ -40,15 +42,6 @@ public class Main {
         Parrent[] PPPP = new Parrent[0];
         PPPP[0] = P9;
 
-        PP[1] = P2;
-        PP[2] = P3;
-        PP[3] = P4;
-        PP[4] = P5;
-        PP[5] = P6;
-        PP[6] = P7;
-        PP[7] = P8;
-        PP[8] = P9;
-
         Teacher T1 = new Teacher("учитель", "математик-физик", 89000000015L, 14, "Людвиг Сергеевич");
         Teacher T2 = new Teacher("Учитель", "Химик", 89000000016L, 15, "Юлия Владимировна");
         Teacher T3 = new Teacher("Учмтель", "Руссич-литератор", 89000000017L, 16, "Ольга Дмитриевна");
@@ -67,23 +60,100 @@ public class Main {
         Learner L2 = new Learner(PPP, 89000000022L, 21, "Мария");
         Learner L3 = new Learner(pp, 89000000023L, 22, "Игорь");
         Learner L4 = new Learner(ppp, 89000000024L, 23, "Евгений");
+        Learner[] LL = new Learner[3];
+        LL[0] = L1;
+        LL[1] = L2;
+        LL[2] = L3;
+        LL[3] = L4;
         Learner L5 = new Learner(Pp, 89000000025L, 24, "Александра");
         Learner L6 = new Learner(pP, 89000000026L, 25, "Виктория");
         Learner L7 = new Learner(PPp, 89000000027L, 26, "Анастасия");
         Learner L8 = new Learner(pppp, 89000000028L, 27, "Кирилл");
         Learner L9 = new Learner(PPPP, 89000000029L, 28, "Жанна");
+        Learner[] Ll = new Learner[4];
+        Ll[0] = L5;
+        Ll[1] = L6;
+        Ll[2] = L7;
+        Ll[3] = L8;
+        LL[4]  = L9;
         Learner L10 = new Learner(PPPP, 89000000030L, 29, "София");
-        Learner[] LL = new Learner[9];
-        LL[0] = L1;
-        LL[1] = L2;
-        LL[2] = L3;
-        LL[3] = L4;
-        LL[4] = L5;
-        LL[5] = L6;
-        LL[6] = L7;
-        LL[7] = L8;
-        LL[8] = L9;
-        LL[9] = L10;
+        Learner[] ll = new Learner[0];
+        ll[0] = L10;
 
+        elective El1 = new elective("Естественные и математические науки", LL, T1);
+        elective El2 = new elective("гуманитарные науки", Ll, T3);
+        elective El3 = new elective("общее образование", ll, T6);
+        elective[] El = new elective[2];
+        El[0] = El1;
+        El[1] = El2;
+        El[2] = El3;
+
+        section S1 = new section("футбол", ll, T4);
+        section S2 = new section("танцы", LL, T4);
+        section S3 = new section("гимнастика", Ll, T4);
+        section[] SS = new section[2];
+        SS[0] = S1;
+        SS[1] = S2;
+        SS[2] = S3;
+
+        Participant p1 = new Participant("Дмитрий Яковлевич", 89000000000L, 1);
+        Participant p2 = new Participant("Анастасия Юрьевна", 89000000001L, 2);
+        Participant p3 = new Participant("Виктор Викторович", 89000000004L, 3);
+        Participant p4 = new Participant("Галина Сергеевна", 89000000005L, 4);
+        Participant p5 = new Participant("Галина Федоровна", 89000000006L, 5);
+        Participant p6 = new Participant("Игорь Юрьевич", 89000000007L, 6);
+        Participant p7 = new Participant("Ирина Сергеевна", 89000000008L, 7);
+        Participant p8 = new Participant("Антон Владимирович", 89000000009L, 8);
+        Participant p9 = new Participant("Антон Антонович", 89000000010L, 9);
+        Participant p10 = new Participant("Светлана Ильична", 89000000011L, 10);
+        Participant p11 = new Participant("Екатерина Алексеевна", 89000000012L, 11);
+        Participant p12 = new Participant("Елизавета Андреевна", 89000000013L, 12);
+        Participant p13 = new Participant("Андрей Игоревич", 89000000014L, 13);
+        Participant p14 = new Participant("Людвиг Сергеевич", 89000000015L, 14);
+        Participant p15 = new Participant("Юлия Владимировна", 89000000016L, 15);
+        Participant p16 = new Participant("Ольга Дмитриевна", 89000000017L, 16);
+        Participant p17 = new Participant("Евгений Маркович", 89000000018L, 17);
+        Participant p18 = new Participant("Анастасия Сергеевна", 89000000019L, 18);
+        Participant p19 = new Participant("Александр Федорович", 89000000020L, 19);
+        Participant p20 = new Participant("Михаил", 89000000021L, 20);
+        Participant p21 = new Participant("Мария", 89000000022L, 21);
+        Participant p22 = new Participant("Игорь", 89000000023L, 22);
+        Participant p23 = new Participant("Евгений", 89000000024L, 23);
+        Participant p24 = new Participant("Александра", 89000000025L, 24);
+        Participant p25 = new Participant("Виктория", 89000000026L, 25);
+        Participant p26 = new Participant("Анастасия", 89000000027L, 26);
+        Participant p27 = new Participant("Кирилл", 89000000028L, 27);
+        Participant p28 = new Participant("Жанна", 89000000029L, 28);
+        Participant p29 = new Participant("София", 89000000030L, 29);
+        Participant[] PpP = new Participant[28];
+        PpP[0] = p1;
+        PpP[1] = p2;
+        PpP[2] = p3;
+        PpP[3] = p4;
+        PpP[4] = p5;
+        PpP[5] = p6;
+        PpP[6] = p7;
+        PpP[7] = p8;
+        PpP[8] = p9;
+        PpP[9] = p10;
+        PpP[10] = p11;
+        PpP[11] = p12;
+        PpP[12] = p13;
+        PpP[13] = p14;
+        PpP[14] = p15;
+        PpP[15] = p16;
+        PpP[16] = p17;
+        PpP[17] = p18;
+        PpP[18] = p19;
+        PpP[19] = p20;
+        PpP[20] = p21;
+        PpP[21] = p22;
+        PpP[22] = p23;
+        PpP[23] = p24;
+        PpP[24] = p25;
+        PpP[25] = p26;
+        PpP[26] = p27;
+        PpP[27] = p28;
+        PpP[28] = p29;
     }
 }
