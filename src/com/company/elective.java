@@ -17,6 +17,5 @@ public class elective {
     }
     public void getListParrents()
     {
-
     }
 }
